@@ -3,3 +3,5 @@
 
 реализуем подход Page Object
 для MainPage
+
+для LoginPage добавили тесты проверки url, нахождения форм login, registred
