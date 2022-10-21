@@ -30,4 +30,10 @@ class ProductPage(BasePage):
         message = self.browser.find_element(*ProductPageLocators.MESSAGE_ADD_TO_BASKET).text
         assert product_name == message, "Товар не добавлен"
     
-    
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+           "Сообщение об успехе отображается, а не должно!"
+        
+    def should_is_disappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+           "Элемент не исчез, а должен!"        
