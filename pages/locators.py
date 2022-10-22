@@ -20,11 +20,7 @@ class LoginPageLocators():
     REG_PASS_FIELD = (By.CSS_SELECTOR, "#id_registration-password1")
     REG_PASS_FIELD_REPEAT = (By.CSS_SELECTOR, "#id_registration-password2")
     REGISTER_BUTTON = (By.CSS_SELECTOR, ".register_form .btn-lg")
-    
-    DELETE_BUTTON = (By.CSS_SELECTOR, "#delete_profile")
-    FIELD_PASS_FOR_DELETE = (By.CSS_SELECTOR, "#id_password")
-    DELETE_BUTTON_FIN = (By.CSS_SELECTOR, ".btn-danger")
-    
+
 class ProductPageLocators():
     BASKET_BUTTON = (By.CSS_SELECTOR, "button.btn-add-to-basket")
     PRODUCT_NAME = (By.CSS_SELECTOR, "div.product_main h1")
