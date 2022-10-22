@@ -17,18 +17,12 @@ class TestUserAddToBasketFromProductPage():
         page.register_new_user(mail1, password1)
         page = BasePage(browser, link)
         page.should_be_authorized_user()
-        #yield
-        #link = "http://selenium1py.pythonanywhere.com/ru/accounts/profile/"
-        #page = LoginPage(browser, link)
-        #page.open()
-        #page.delete_user()
         
     def test_user_can_add_product_to_basket(self, browser):
         link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
         page = ProductPage(browser, link)
         page.open()
         page.should_be_add_to_basket()
-        #page.solve_quiz_and_get_code()
         page.should_be_product_in_basket()    
 
     def test_user_cant_see_success_message(self, browser):
